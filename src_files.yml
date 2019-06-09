@@ -1,0 +1,25 @@
+hwpe-color-converter:
+  vlog_opts: [
+    +nowarnSVCHK,
+  ]
+  incdirs: [
+    rtl,
+  ]
+  files: [
+    rtl/control/control.sv,
+    rtl/control/control_registers.sv,
+    rtl/rgb2ycbcr/hwpe_rgb2ycbcr.sv
+    rtl/rgb2ycbcr/rgb2ycbcr.sv
+    rtl/rgb2ycbcr/rgb2ycbcr_package.sv
+    rtl/streamer/streamer.sv,
+    rtl/hwpe_color_converter.sv,
+    rtl/hwpe_color_converter_wrap.sv,
+  ]
+
+tb_hwpe-color-converter:
+  flags: [
+    skip_synthesis,
+  ]
+  files: [
+    tb/rgb2ycbcr_tb.sv,
+  ]
