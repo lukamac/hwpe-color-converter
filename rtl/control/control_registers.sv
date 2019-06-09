@@ -1,0 +1,24 @@
+package control_registers;
+
+  // OPERAND A CONTROL REGISTERS INDICES
+  parameter RGB_BASE_ADDR_INDEX   = 0;
+  parameter RGB_LINE_STRIDE_INDEX = 1;
+  parameter RGB_LINE_LENGTH_INDEX = 1;
+  parameter RGB_FEAT_STRIDE_INDEX = 2;
+  parameter RGB_FEAT_LENGTH_INDEX = 2;
+  parameter RGB_LOOP_OUTER_INDEX  = 3;
+  parameter RGB_FEAT_ROLL_INDEX   = 3;
+
+  // OPERAND B CONTROL REGISTERS INDICES
+  parameter YCBCR_BASE_ADDR_INDEX   = 4;
+  parameter YCBCR_LINE_STRIDE_INDEX = 5;
+  parameter YCBCR_LINE_LENGTH_INDEX = 5;
+  parameter YCBCR_FEAT_STRIDE_INDEX = 6;
+  parameter YCBCR_FEAT_LENGTH_INDEX = 6;
+  parameter YCBCR_LOOP_OUTER_INDEX  = 7;
+  parameter YCBCR_FEAT_ROLL_INDEX   = 7;
+
+  // COMMON CONTROL REGISTER INDICES
+  parameter TRANSACTION_SIZE_INDEX = 8;
+
+endpackage
