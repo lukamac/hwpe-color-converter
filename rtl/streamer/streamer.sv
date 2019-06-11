@@ -38,7 +38,7 @@ ycbcr ( clk_i );
 
 // HWPE STREAM
 hwpe_stream_source #(
-    .DATA_WIDTH(STREAM_WIDTH),
+    .DATA_WIDTH (STREAM_WIDTH),
     .NB_TCDM_PORTS (STREAM_WIDTH/32),
     .DECOUPLED (1),
     .LATCH_FIFO (0),
@@ -46,7 +46,7 @@ hwpe_stream_source #(
 ) stream_source (
     .clk_i (clk_i),
     .rst_ni (rst_ni),
-    .test_mode_i (1'b0),
+    .test_mode_i (),
     .clear_i (clear_i),
     .tcdm (tcdm_load),
     .stream (rgb),
@@ -56,8 +56,12 @@ hwpe_stream_source #(
 );
 
 hwpe_rgb2ycbcr #(
-    .STREAM_WIDTH(STREAM_WIDTH)
+    .STREAM_WIDTH(STREAM_WIDTH),
+    .REGISTERED(1)
 ) hwpe_rgb2ycbcr_inst (
+    .clk(clk_i),
+    .rst_n(rst_ni),
+    .clear(clear_i),
     .rgb(rgb),
     .ycbcr(ycbcr)
 );
@@ -69,7 +73,7 @@ hwpe_stream_sink #(
 ) stream_sink (
     .clk_i (clk_i),
     .rst_ni (rst_ni),
-    .test_mode_i (1'b0),
+    .test_mode_i (),
     .clear_i (clear_i),
     .tcdm (tcdm_store),
     .stream (ycbcr),
