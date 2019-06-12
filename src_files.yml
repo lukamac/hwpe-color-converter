@@ -8,9 +8,9 @@ hwpe-color-converter:
   files: [
     rtl/control/control.sv,
     rtl/control/control_registers.sv,
-    rtl/rgb2ycbcr/hwpe_rgb2ycbcr.sv,
     rtl/rgb2ycbcr/rgb2ycbcr_package.sv,
     rtl/rgb2ycbcr/rgb2ycbcr.sv,
+    rtl/rgb2ycbcr/hwpe_rgb2ycbcr.sv,
     rtl/streamer/streamer.sv,
     rtl/hwpe_color_converter.sv,
     rtl/hwpe_color_converter_wrap.sv,
